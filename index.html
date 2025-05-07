@@ -18,6 +18,16 @@ p {font-size: 100%; color: DarkOliveGreen; font-family:Papyrus}
 }
 </style>
 <body>
+<script>
+  var toggleIntervalId = setInterval( function() {
+    var $div = $('#toggleMe');
+    if( $div.length ) {
+        $div.attr( 'background-color', $div.attr('background-color')=='black' 
+            ? 'white' : 'black' );
+    } else {
+        clearInterval( toggleIntervalId );
+}, 2000 );
+</script>
 <div class="blinkdev">
 <h1 style="text-align:center; font-family:Garamond;"><b>project Lucifer</b></h1>
 <p style="text-align:center;"><br>This is the <b>project Lucifer</b> website</p>
